@@ -42,7 +42,7 @@ def nearest_neighbor(target_vector, vectors):
     '''
     ### YOUR CODE HERE
     nearest = cosine_similarity(target_vector, vectors[0])
-    for i in range(vectors):
+    for i in range(vectors.shape[0]):
         closenessTest = cosine_similarity(target_vector, vectors[i])
         if  closenessTest < nearest:
             nearest = closenessTest
